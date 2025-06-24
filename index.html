@@ -25,10 +25,6 @@
             <li><a href="#about" class="nav-link">About</a></li>
             <li><a href="#services" class="nav-link">Projects</a></li>
             <li><a href="#contact" class="nav-link">Contact</a></li>
-            <li><button id="theme-toggle" class="theme-toggle" aria-label="Toggle dark/light mode">
-              <i class="fas fa-moon dark-icon"></i>
-              <i class="fas fa-sun light-icon"></i>
-            </button></li>
             <i class="fas fa-solid fa-xmark" onclick="closemenu()"></i>
           </ul>
           <i class="fas fa-solid fa-bars" onclick="openmenu()"></i>
@@ -56,15 +52,13 @@
     <!-- ------------------------------about-------------- -->
     <div id="about">
       <div class="container">
-        <div class="row">
-          <div class="about-col-1" data-aos="fade-right">
-            <img src="images/User.png" alt="users" />
-            <div class="about-overlay">
-              <div class="about-badge">ML Engineer</div>
-              <div class="about-badge">Full Stack Developer</div>
-            </div>
+        <div class="about-header" data-aos="fade-up">
+          <div class="about-badges">
+            <div class="about-badge">ML Engineer</div>
+            <div class="about-badge">Full Stack Developer</div>
           </div>
-          <div class="about-col-2" data-aos="fade-left">
+        </div>
+        <div class="about-content" data-aos="fade-up">
             <h1 class="sub-title">About Me</h1>
             <p>
               I am a passionate Machine Learning Engineer and Full Stack Developer with expertise in building
@@ -195,7 +189,7 @@
                   <div class="timeline-dot"><i class="fas fa-university"></i></div>
                   <div class="timeline-content">
                     <span class="timeline-date">OCT 2020 - JUNE 2024</span>
-                    <h3 class="timeline-title">B.Tech in Computer Science</h3>
+                    <h3 class="timeline-title">B.Tech in Electronics Communication</h3>
                     <p class="timeline-company">Oriental Institute of Science and Technology</p>
                     <p class="timeline-description">Focused on AI/ML, data structures, and software engineering principles.</p>
                   </div>
@@ -220,7 +214,7 @@
             <p>
               Built a fully automated pipeline to monitor and classify risk-linked news on high-profile entities across global 
               watchlists (SAN, PEP, APC, WLT). Implemented data scraping via Brave/Bing and applied sentiment analysis to isolate adverse content with over 
-              90% accuracy. Trained an NLP model to categorize negative articles into 7+ crime categories, enhancing clarity for 
+              90% accuracy. Trained an NLP model to categorize negative articles into 57+ crime categories, enhancing clarity for 
               compliance teams.
             </p>
             <div class="tech-stack">
@@ -402,28 +396,7 @@
         document.getElementById(tabname).classList.add("active-tab");
       }
       
-      // Theme toggle functionality
-      const themeToggle = document.getElementById('theme-toggle');
-      
-      // Check for saved theme preference or use device preference
-      const prefersDarkScheme = window.matchMedia('(prefers-color-scheme: dark)');
-      const savedTheme = localStorage.getItem('theme');
-      
-      if (savedTheme === 'light' || (!savedTheme && !prefersDarkScheme.matches)) {
-        document.body.classList.add('light-mode');
-      }
-      
-      // Toggle theme when button is clicked
-      themeToggle.addEventListener('click', () => {
-        document.body.classList.toggle('light-mode');
-        
-        // Save preference to localStorage
-        if (document.body.classList.contains('light-mode')) {
-          localStorage.setItem('theme', 'light');
-        } else {
-          localStorage.setItem('theme', 'dark');
-        }
-      });
+      // Dark mode is now the default and only theme
     </script>
 
     <script>
