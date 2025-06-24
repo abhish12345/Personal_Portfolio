@@ -1,185 +1,543 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="images/favicon.ico" href="images/favicon.ico">
-    <title>Personal Portfolio Website</title>
-    <link rel="stylesheet" href="style.css">
-    <script src="https://kit.fontawesome.com/d3e17283c7.js" crossorigin="anonymous"></script>
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="images/favicon.ico" href="images/favicon.ico" />
+    <title>Professional Portfolio | Abhishek Kumar</title>
+    <link rel="stylesheet" href="style.css" />
+    <script
+      src="https://kit.fontawesome.com/d3e17283c7.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Additional Font Awesome for timeline icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  </head>
+  <body>
     <div id="header">
-        <div class="container">
-            <nav>
-                <img src="images/Logo.jpg" class="logo">
-                <ul id="sidemenu">
-                    <li><a href="#header">Home</a></li>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#services">Project</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                    <i class="fas fa-solid fa-xmark" onclick="closemenu()"></i>
-                </ul>
-                <i class="fas fa-solid fa-bars" onclick="openmenu()"></i>
-            </nav>
-
-            <div class="header-text">
-            <p>Java Full Stack Developer & Data Scientist</p>    
-            <h1>Hi, I'm <span>Abhishek</span><br> From India</h1>            
+      <div class="container">
+        <nav>
+          <img src="images/Logo.jpg" class="logo" data-aos="fade-down" />
+          <ul id="sidemenu">
+            <li><a href="#header" class="nav-link">Home</a></li>
+            <li><a href="#about" class="nav-link">About</a></li>
+            <li><a href="#services" class="nav-link">Projects</a></li>
+            <li><a href="#contact" class="nav-link">Contact</a></li>
+            <li><button id="theme-toggle" class="theme-toggle" aria-label="Toggle dark/light mode">
+              <i class="fas fa-moon dark-icon"></i>
+              <i class="fas fa-sun light-icon"></i>
+            </button></li>
+            <i class="fas fa-solid fa-xmark" onclick="closemenu()"></i>
+          </ul>
+          <i class="fas fa-solid fa-bars" onclick="openmenu()"></i>
+        </nav>
+        <div class="header-content">
+          <div class="header-text" data-aos="fade-right" data-aos-duration="1000">
+            <div class="header-badge">Available for Work</div>
+            <h1>Hi, I'm <span class="highlight-text">Abhishek</span> Kumar</h1>
+            <p class="header-subtitle"><span class="typed-text"></span><span class="cursor">&nbsp;</span></p>
+            <div class="header-btns" data-aos="fade-up" data-aos-delay="300">
+              <a href="#services" class="btn btn-primary"><i class="fas fa-project-diagram"></i> View My Work</a>
+              <a href="#contact" class="btn btn-secondary"><i class="fas fa-paper-plane"></i> Contact Me</a>
             </div>
+          </div>
+          <div class="header-shape" data-aos="fade-left" data-aos-duration="1000">
+            <div class="shape-bg"></div>
+          </div>
         </div>
+      </div>
+      <div class="scroll-down">
+        <a href="#about"><span></span><span></span><span></span></a>
+      </div>
     </div>
 
-<!-- ------------------------------about-------------- -->
+    <!-- ------------------------------about-------------- -->
     <div id="about">
-        <div class="container">
-            <div class="row">
-                <div class="about-col-1">
-                    <img src="images/User.png" alt="users">
-                </div>
-                <div class="about-col-2">
-                    <h1 class="sub-title">About Me</h1>
-                    <p>My main goal is to secure a position in any organization where I can efficiently contribute my skills and abilities for the growth of the organization and build my professional carrier. I am a careful and creative thinker with an eye for details and a devotion to logic, which serves me well both in the sciences and outside them. I have a terrific ability to draw on my own experience and observations to develop thoughtful opinions on a variety of issues. I portray myself to be a good orator after some successful seminars I gave for some of the post graduation folks at college.</p>
-
-                    <div class="tab-titles">
-                        <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
-                        <p class="tab-links" onclick="opentab('internship')">Experience</p>
-                        <p class="tab-links" onclick="opentab('education')">Education</p>
-                    </div>
-                    <div class="tab-contents active-tab" id="skills">
-                        <ul>
-                            <li><span>Languages</span><br>Python, Java, SQL</li>
-                            <li><span>Web Development</span><br>HTML, CSS, JavaScript, React</li>
-                            <li><span>Data Science</span><br>Scikit-learn, TensorFlow, Keras, PyTorch</li>
-                        </ul>
-                    </div>
-                    <div class="tab-contents" id="internship">
-                        <ul>
-                            <li><span>Feb 2025 - Current</span><br>Machine Learning Engineer at Azine Technology </li>
-                            <li><span>Jul 2024 - Jan 2025</span><br>AI/ML Intern at Phoenix Labs Global </li>
-                            <li><span>Oct 2024 - Dec 2024</span><br>Machine Learning Intern at Infosys </li>
-                        </ul>
-                    </div>
-                    <div class="tab-contents" id="education">
-                        <ul>
-                            <li><span>OCT 2024 - MAR 2025</span><br>Java Full Stack Training from KodNest</li>
-                            <li><span>OCT 2020 - JUNE 2024</span><br>B.Tech from Oriental Institute of Science and Technology</li>
-                        </ul>
-                    </div>
-                </div>
+      <div class="container">
+        <div class="row">
+          <div class="about-col-1" data-aos="fade-right">
+            <img src="images/User.png" alt="users" />
+            <div class="about-overlay">
+              <div class="about-badge">ML Engineer</div>
+              <div class="about-badge">Full Stack Developer</div>
             </div>
+          </div>
+          <div class="about-col-2" data-aos="fade-left">
+            <h1 class="sub-title">About Me</h1>
+            <p>
+              I am a passionate Machine Learning Engineer and Full Stack Developer with expertise in building
+              intelligent systems and web applications. With a strong foundation in Python, Java, and various ML frameworks,
+              I specialize in developing data-driven solutions that solve real-world problems. My experience spans from
+              creating advanced NLP systems to developing responsive web applications. I am dedicated to continuous learning
+              and applying cutting-edge technologies to create efficient, scalable, and innovative solutions.
+            </p>
+
+            <div class="tab-titles">
+              <p class="tab-links active-link" onclick="opentab('skills')">
+                Skills
+              </p>
+              <p class="tab-links" onclick="opentab('internship')">
+                Experience
+              </p>
+              <p class="tab-links" onclick="opentab('education')">Education</p>
+            </div>
+            <div class="tab-contents active-tab" id="skills">
+              <div class="skills-container">
+                <div class="skill-category" data-aos="fade-up" data-aos-delay="100">
+                  <h3><span>Languages</span></h3>
+                  <div class="skill-tags">
+                    <span class="skill-tag">Python</span>
+                    <span class="skill-tag">Java</span>
+                    <span class="skill-tag">JavaScript</span>
+                    <span class="skill-tag">HTML</span>
+                    <span class="skill-tag">CSS</span>
+                    <span class="skill-tag">SQL</span>
+                  </div>
+                </div>
+                
+                <div class="skill-category" data-aos="fade-up" data-aos-delay="200">
+                  <h3><span>Frameworks & Libraries</span></h3>
+                  <div class="skill-tags">
+                    <span class="skill-tag">TensorFlow</span>
+                    <span class="skill-tag">PyTorch</span>
+                    <span class="skill-tag">Scikit-learn</span>
+                    <span class="skill-tag">OpenCV</span>
+                    <span class="skill-tag">Pandas</span>
+                    <span class="skill-tag">NumPy</span>
+                    <span class="skill-tag">Flask</span>
+                    <span class="skill-tag">FastAPI</span>
+                    <span class="skill-tag">ReactJS</span>
+                    <span class="skill-tag">Tailwind CSS</span>
+                  </div>
+                </div>
+                
+                <div class="skill-category" data-aos="fade-up" data-aos-delay="300">
+                  <h3><span>Dev Tools & Technologies</span></h3>
+                  <div class="skill-tags">
+                    <span class="skill-tag">Docker</span>
+                    <span class="skill-tag">Git</span>
+                    <span class="skill-tag">GitHub</span>
+                    <span class="skill-tag">VS Code</span>
+                    <span class="skill-tag">Postman</span>
+                    <span class="skill-tag">Eclipse</span>
+                    <span class="skill-tag">Jupyter Notebook</span>
+                    <span class="skill-tag">Gitlab</span>
+                  </div>
+                </div>
+                
+                <div class="skill-category" data-aos="fade-up" data-aos-delay="400">
+                  <h3><span>Databases</span></h3>
+                  <div class="skill-tags">
+                    <span class="skill-tag">MongoDB</span>
+                    <span class="skill-tag">MySQL</span>
+                  </div>
+                </div>
+                
+                <div class="skill-category" data-aos="fade-up" data-aos-delay="500">
+                  <h3><span>Machine Learning</span></h3>
+                  <div class="skill-tags">
+                    <span class="skill-tag">Supervised Learning</span>
+                    <span class="skill-tag">Unsupervised Learning</span>
+                    <span class="skill-tag">CNN</span>
+                    <span class="skill-tag">NLP</span>
+                    <span class="skill-tag">Computer Vision</span>
+                    <span class="skill-tag">Feature Engineering</span>
+                    <span class="skill-tag">Model Deployment</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="tab-contents" id="internship">
+              <ul class="timeline">
+                <li class="timeline-item">
+                  <div class="timeline-dot"><i class="fas fa-briefcase"></i></div>
+                  <div class="timeline-content">
+                    <span class="timeline-date">Feb 2025 - Current</span>
+                    <h3 class="timeline-title">Machine Learning Engineer</h3>
+                    <p class="timeline-company">Azine Technology</p>
+                    <p class="timeline-description">Developing advanced ML models for real-time data analysis and predictive systems.</p>
+                  </div>
+                </li>
+                <li class="timeline-item">
+                  <div class="timeline-dot"><i class="fas fa-laptop-code"></i></div>
+                  <div class="timeline-content">
+                    <span class="timeline-date">Jul 2024 - Jan 2025</span>
+                    <h3 class="timeline-title">AI/ML Intern</h3>
+                    <p class="timeline-company">Phoenix Labs Global</p>
+                    <p class="timeline-description">Worked on natural language processing models and computer vision applications.</p>
+                  </div>
+                </li>
+                <li class="timeline-item">
+                  <div class="timeline-dot"><i class="fas fa-code"></i></div>
+                  <div class="timeline-content">
+                    <span class="timeline-date">Oct 2024 - Dec 2024</span>
+                    <h3 class="timeline-title">Machine Learning Intern</h3>
+                    <p class="timeline-company">Infosys</p>
+                    <p class="timeline-description">Assisted in developing and testing machine learning algorithms for enterprise solutions.</p>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="tab-contents" id="education">
+              <ul class="timeline">
+                <li class="timeline-item">
+                  <div class="timeline-dot"><i class="fas fa-graduation-cap"></i></div>
+                  <div class="timeline-content">
+                    <span class="timeline-date">OCT 2024 - MAR 2025</span>
+                    <h3 class="timeline-title">Java Full Stack Training</h3>
+                    <p class="timeline-company">KodNest</p>
+                    <p class="timeline-description">Comprehensive training in Java, Spring Boot, React, and related technologies.</p>
+                  </div>
+                </li>
+                <li class="timeline-item">
+                  <div class="timeline-dot"><i class="fas fa-university"></i></div>
+                  <div class="timeline-content">
+                    <span class="timeline-date">OCT 2020 - JUNE 2024</span>
+                    <h3 class="timeline-title">B.Tech in Computer Science</h3>
+                    <p class="timeline-company">Oriental Institute of Science and Technology</p>
+                    <p class="timeline-description">Focused on AI/ML, data structures, and software engineering principles.</p>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
         </div>
+      </div>
     </div>
 
-    <!-- -----------------------------services-------------- -->
+    <!-- -----------------------------projects-------------- -->
     <div id="services">
-        <div class="container">
-            <h1 class="sub-title">My Projects</h1>
-            <div class="services-list">
-                <div>
-                    <i class="fa-solid fa-code"></i>
-                    <h2 id="try">BankruptcyGuard</h2>
-                    <p>Developed a Bankruptcy Classifier using ML, leveraging Random Forest and Logistic Regression with advanced preprocessing and feature engineering for enhanced accuracy.</p>
-                    <a href="https://github.com/abhish12345/Bankruptcy" target="_blank">Learn more</a>
-                </div>
-                <div>
-                    <i class="fa-solid fa-crop"></i>
-                    <h2>Spotify Clone</h2>
-                    <p>Developed a Spotify Clone using React, HTML, CSS, and JavaScript, implementing dynamic music streaming features and an intuitive user interface.</p>
-                    <a href="https://spotify-samspace.vercel.app/" target="_blank">Learn more</a>
-                </div>
-                <div>
-                    <i class="fa-brands fa-rocketchat"></i>
-                    <h2>Chatbot</h2>
-                    <p>Developed a transformer-based chatbot leveraging NLP techniques like tokenization and embeddings for human-like conversational responses.</p>
-                    <a href="https://github.com/abhish12345/Chatbot" target="_blank">Learn more</a>
-                </div>
+      <div class="container">
+        <h1 class="sub-title" data-aos="fade-up">My <span>Projects</span></h1>
+        <div class="services-list">
+          <div class="project-card" data-aos="flip-left" data-aos-delay="100" data-aos-duration="1000">
+            <div class="project-icon">
+              <i class="fas fa-shield-alt"></i>
             </div>
+            <h2>Anti Money Laundering (AML) System</h2>
+            <p>
+              Built a fully automated pipeline to monitor and classify risk-linked news on high-profile entities across global 
+              watchlists (SAN, PEP, APC, WLT). Implemented data scraping via Brave/Bing and applied sentiment analysis to isolate adverse content with over 
+              90% accuracy. Trained an NLP model to categorize negative articles into 7+ crime categories, enhancing clarity for 
+              compliance teams.
+            </p>
+            <div class="tech-stack">
+              <span>Python</span>
+              <span>FastAPI</span>
+              <span>React</span>
+              <span>NLP</span>
+              <span>MongoDB</span>
+            </div>
+            <div class="project-overlay">
+              <div class="project-details">
+                <h3>Key Features</h3>
+                <ul>
+                  <li>Real-time transaction monitoring</li>
+                  <li>Anomaly detection algorithms</li>
+                  <li>Regulatory compliance reporting</li>
+                  <li>Risk scoring system</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="project-card" data-aos="flip-left" data-aos-delay="300" data-aos-duration="1000">
+            <div class="project-icon">
+              <i class="fas fa-id-card"></i>
+            </div>
+            <h2>Multi-National ID Barcode Extraction System</h2>
+            <p>
+              Created a universal barcode reader for IDs from over 5 countries, extracting structured data from PDF417 barcodes in various formats. 
+              Applied OpenCV preprocessing and YOLOv11 fine-tuning to boost barcode detection accuracy by 40% across poor lighting and low-res images. 
+              Engineered a multi-step OCR and parsing pipeline using PDF417 decoding with fallback filters.
+            </p>
+            <div class="tech-stack">
+              <span>YOLOv11</span>
+              <span>OpenCV</span>
+              <span>PDF417</span>
+              <span>Python</span>
+              <span>OCR</span>
+            </div>
+            <div class="project-overlay">
+              <div class="project-details">
+                <h3>Key Features</h3>
+                <ul>
+                  <li>Multi-language OCR support</li>
+                  <li>Barcode & QR code scanning</li>
+                  <li>Document validation</li>
+                  <li>Data extraction pipeline</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="project-card" data-aos="flip-left" data-aos-delay="500" data-aos-duration="1000">
+            <div class="project-icon">
+              <i class="fas fa-brain"></i>
+            </div>
+            <h2>MNIST Digit Recognition</h2>
+            <p>
+              Engineered and fine-tuned the LeNet-5 CNN architecture to classify handwritten digits with 98%+ accuracy, 
+              outperforming basic CNN models. Conducted detailed analysis of training efficiency and generalization between LeNet-5 and traditional CNNs. 
+              Built the entire ML pipeline with Python and TensorFlow.
+            </p>
+            <div class="tech-stack">
+              <span>LeNet-5</span>
+              <span>CNN</span>
+              <span>TensorFlow</span>
+              <span>Python</span>
+            </div>
+            <div class="project-overlay">
+              <div class="project-details">
+                <h3>Key Features</h3>
+                <ul>
+                  <li>Convolutional Neural Network</li>
+                  <li>Interactive drawing interface</li>
+                  <li>Real-time prediction</li>
+                  <li>High accuracy (>98%)</li>
+                </ul>
+              </div>
+            </div>
+          </div>
         </div>
+      </div>
     </div>
 
     <!-- -------------------------contact------------------- -->
 
     <div id="contact">
-        <div class="container">
-            <div class="row">
-                <div class="contact-left">
-                    <h1 class="sub-title">Contact Me</h1>
-                    <p><i class="fa-solid fa-envelope"></i> abhishekkumarnwd71@gmail.com</p>
-                    <p><i class="fa-solid fa-phone"></i> 9431853882</p>
-                    <div class="social-icon">
-                        <a href="https://github.com/abhish12345"target="_blank"><i class="fa-brands fa-square-github"></i></a>
-                        <a href="https://www.instagram.com/abh.shek_pandey/" target="_blank"><i class="fa-brands fa-square-instagram"></i></a>
-                        <a href="https://www.linkedin.com/in/abhishek-kumar-a26b3522a/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
-                    </div>
-                    <a href="images/CV.pdf" target="_blank" class="btn btn2">Download CV</a>
+      <div class="container">
+        <h1 class="sub-title" data-aos="fade-right">Contact Me</h1>
+        <p class="contact-desc" data-aos="fade-up">Feel free to reach out if you're looking for a developer, have a question, or just want to connect.</p>
+        
+        <div class="row">
+          <div class="contact-left" data-aos="fade-right" data-aos-delay="100">
+            <div class="contact-info">
+              <div class="contact-item">
+                <i class="fa-solid fa-envelope"></i>
+                <div>
+                  <h3>Email</h3>
+                  <p>abhishekkumarnwd71@gmail.com</p>
                 </div>
-
-                <div class="contact-right">
-                    <form name="submit-to-google-sheet">
-                        <input type="text" name="Name" placeholder="Your Name" required>
-                        <input type="email" name="Email" placeholder="Your Email" required>
-                        <textarea name="Message" rows id="6" placeholder="Your Message"></textarea>
-                        <button type="submit" class="btn btn2">Submit</button>
-                    </form>
-                    <span id="msg"></span>
+              </div>
+              <div class="contact-item">
+                <i class="fa-solid fa-phone"></i>
+                <div>
+                  <h3>Phone</h3>
+                  <p>9431853882</p>
                 </div>
+              </div>
+              <div class="contact-item">
+                <i class="fa-solid fa-location-dot"></i>
+                <div>
+                  <h3>Location</h3>
+                  <p>India</p>
+                </div>
+              </div>
             </div>
+            
+            <div class="social-icon">
+              <a href="https://github.com/abhish12345" target="_blank" title="GitHub"
+                ><i class="fa-brands fa-square-github"></i
+              ></a>
+              <a
+                href="https://www.instagram.com/abh.shek_pandey/"
+                target="_blank"
+                title="Instagram"
+                ><i class="fa-brands fa-square-instagram"></i
+              ></a>
+              <a
+                href="https://www.linkedin.com/in/abhishek-kumar-a26b3522a/"
+                target="_blank"
+                title="LinkedIn"
+                ><i class="fa-brands fa-linkedin"></i
+              ></a>
+            </div>
+            <a href="images/CV.pdf" target="_blank" class="btn btn2"
+              ><i class="fa-solid fa-download"></i> Download CV</a
+            >
+          </div>
+
+          <div class="contact-right" data-aos="fade-left" data-aos-delay="200">
+            <form name="submit-to-google-sheet">
+              <div class="input-group">
+                <input type="text" name="Name" placeholder="Your Name" required />
+                <input
+                  type="email"
+                  name="Email"
+                  placeholder="Your Email"
+                  required
+                />
+              </div>
+              <textarea
+                name="Message"
+                rows="6"
+                placeholder="Your Message"
+              ></textarea>
+              <button type="submit" class="btn btn2"><i class="fa-solid fa-paper-plane"></i> Send Message</button>
+            </form>
+            <span id="msg"></span>
+          </div>
         </div>
-        <div class="copyright">
-            <p>Copyright © Abhi. Made by <i class="fa-solid fa-heart"></i> Abhishek Kumar</p>
-        </div>
+      </div>
+      <div class="copyright">
+        <p>
+          Copyright © 2023 | Made with <i class="fa-solid fa-heart"></i> by Abhishek Kumar
+        </p>
+      </div>
     </div>
 
-
     <script>
-        var tablinks = document.getElementsByClassName("tab-links");
-        var tabcontents = document.getElementsByClassName("tab-contents");
+      var tablinks = document.getElementsByClassName("tab-links");
+      var tabcontents = document.getElementsByClassName("tab-contents");
 
-        function opentab(tabname) {
-            for(tablink of tablinks) {
-                tablink.classList.remove("active-link");
-            }
-
-            for(tabcontent of tabcontents) {
-                tabcontent.classList.remove("active-tab");
-            }
-            event.currentTarget.classList.add("active-link");
-            document.getElementById(tabname).classList.add("active-tab");
+      function opentab(tabname) {
+        for (tablink of tablinks) {
+          tablink.classList.remove("active-link");
         }
+        for (tabcontent of tabcontents) {
+          tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
+      }
+      
+      // Theme toggle functionality
+      const themeToggle = document.getElementById('theme-toggle');
+      
+      // Check for saved theme preference or use device preference
+      const prefersDarkScheme = window.matchMedia('(prefers-color-scheme: dark)');
+      const savedTheme = localStorage.getItem('theme');
+      
+      if (savedTheme === 'light' || (!savedTheme && !prefersDarkScheme.matches)) {
+        document.body.classList.add('light-mode');
+      }
+      
+      // Toggle theme when button is clicked
+      themeToggle.addEventListener('click', () => {
+        document.body.classList.toggle('light-mode');
+        
+        // Save preference to localStorage
+        if (document.body.classList.contains('light-mode')) {
+          localStorage.setItem('theme', 'light');
+        } else {
+          localStorage.setItem('theme', 'dark');
+        }
+      });
     </script>
 
     <script>
-        var sidemeu = document.getElementById("sidemenu");
+      var sidemeu = document.getElementById("sidemenu");
 
-        function openmenu(){
-            sidemeu.style.right = "0";
+      function openmenu() {
+        sidemeu.style.right = "0";
+      }
+      function closemenu() {
+        sidemeu.style.right = "-200px";
+      }
+    </script>
+    
+    <script>
+      // Typing animation
+      const typedTextSpan = document.querySelector(".typed-text");
+      const cursorSpan = document.querySelector(".cursor");
+      
+      const textArray = ["Machine Learning Engineer", "Full Stack Developer", "AI Enthusiast", "Problem Solver"];
+      const typingDelay = 100;
+      const erasingDelay = 50;
+      const newTextDelay = 2000; // Delay between current and next text
+      let textArrayIndex = 0;
+      let charIndex = 0;
+      
+      function type() {
+        if (charIndex < textArray[textArrayIndex].length) {
+          if(!cursorSpan.classList.contains("typing")) cursorSpan.classList.add("typing");
+          typedTextSpan.textContent += textArray[textArrayIndex].charAt(charIndex);
+          charIndex++;
+          setTimeout(type, typingDelay);
+        } 
+        else {
+          cursorSpan.classList.remove("typing");
+          setTimeout(erase, newTextDelay);
         }
-
-        function closemenu(){
-            sidemeu.style.right = "-200px";
+      }
+      
+      function erase() {
+        if (charIndex > 0) {
+          if(!cursorSpan.classList.contains("typing")) cursorSpan.classList.add("typing");
+          typedTextSpan.textContent = textArray[textArrayIndex].substring(0, charIndex-1);
+          charIndex--;
+          setTimeout(erase, erasingDelay);
+        } 
+        else {
+          cursorSpan.classList.remove("typing");
+          textArrayIndex++;
+          if(textArrayIndex >= textArray.length) textArrayIndex = 0;
+          setTimeout(type, typingDelay + 1100);
         }
+      }
+      
+      document.addEventListener("DOMContentLoaded", function() {
+        if(textArray.length) setTimeout(type, newTextDelay + 250);
+      });
     </script>
 
-<script>
-    const scriptURL = 'https://script.google.com/macros/s/AKfycbxemCV2xYrBEPRo8WWQym7PHUsKiBPFtcHsrq0GJukbaA2hJ2_7m1x1oWitPtVlEJtL/exec'
-    const form = document.forms['submit-to-google-sheet']
-    const msg = document.getElementById("msg")
-  
-    form.addEventListener('submit', e => {
-      e.preventDefault()
-      fetch(scriptURL, { method: 'POST', body: new FormData(form)})
-        .then(response => {
-            msg.innerHTML = "Message sent successfully"
-            setTimeout(function(){
-                msg.innerHTML= ""
-            },5000)
-            form.reset()
-        })
-        .catch(error => console.error('Error!', error.message))
-    })
-  </script>
+    <script>
+      const scriptURL =
+        "https://script.google.com/macros/s/AKfycbxemCV2xYrBEPRo8WWQym7PHUsKiBPFtcHsrq0GJukbaA2hJ2_7m1x1oWitPtVlEJtL/exec";
+      const form = document.forms["submit-to-google-sheet"];
+      const msg = document.getElementById("msg");
 
+      form.addEventListener("submit", (e) => {
+        e.preventDefault();
+        fetch(scriptURL, { method: "POST", body: new FormData(form) })
+          .then((response) => {
+            msg.innerHTML = "Message sent successfully";
+            setTimeout(function () {
+              msg.innerHTML = "";
+            }, 5000);
+            form.reset();
+          })
+          .catch((error) => console.error("Error!", error.message));
+      });
+    </script>
+    
+    <!-- AOS Animation Library -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init({
+        duration: 800,
+        offset: 150,
+        once: false,
+        mirror: true
+      });
+    </script>
+    
+    <script>
+      // Add active class to nav links on scroll
+      document.addEventListener('DOMContentLoaded', function() {
+        const sections = document.querySelectorAll('div[id]');
+        const navLinks = document.querySelectorAll('.nav-link');
+        
+        window.addEventListener('scroll', function() {
+          let current = '';
+          
+          sections.forEach(section => {
+            const sectionTop = section.offsetTop;
+            const sectionHeight = section.clientHeight;
+            if (pageYOffset >= (sectionTop - sectionHeight / 3)) {
+              current = section.getAttribute('id');
+            }
+          });
 
-</body>
+          navLinks.forEach(link => {
+            link.classList.remove('active');
+            if (link.getAttribute('href').substring(1) === current) {
+              link.classList.add('active');
+            }
+          });
+        });
+      });
+    </script>
+  </body>
 </html>
