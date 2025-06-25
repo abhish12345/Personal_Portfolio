@@ -141,9 +141,10 @@ body.light-mode .light-icon {
 
 .header-content {
     display: flex;
+    flex-direction: column;
     align-items: center;
-    justify-content: space-between;
-    height: calc(100% - 100px);
+    text-align: center;
+    padding: 40px 0;
 }
 
 .header-text{
@@ -218,7 +219,7 @@ body.light-mode .header-subtitle {
     width: 3px;
     background-color: var(--light-text);
     margin-left: 5px;
-    animation: blink 1s infinite;
+    animation: blink 1s ease-in-out infinite;
 }
 
 @keyframes blink {
@@ -360,15 +361,18 @@ body.light-mode .header-subtitle {
     bottom: -100px;
     left: -100px;
     z-index: 0;
-    animation: floatBubble 15s infinite alternate-reverse ease-in-out;
+    animation: floatBubble 12s infinite alternate ease-in-out;
 }
 
 @keyframes floatBubble {
     0% {
         transform: translate(0, 0);
     }
+    50% {
+        transform: translate(30px, 30px);
+    }
     100% {
-        transform: translate(50px, 50px);
+        transform: translate(0, 0);
     }
 }
 
@@ -461,8 +465,11 @@ body.light-mode #about::after {
 }
 
 .about-content {
-    max-width: 800px;
-    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 50px auto 0;
+    max-width: 1000px;
     text-align: center;
 }
 
@@ -693,10 +700,12 @@ body.light-mode .timeline::before {
 
 .timeline-content {
     background: rgba(255, 107, 107, 0.05);
-    padding: 15px;
-    border-radius: 8px;
+    padding: 25px;
+    border-radius: 10px;
     border-left: 2px solid var(--primary-color);
     transition: var(--transition-default);
+    max-width: 800px;
+    margin: 0 auto;
 }
 
 body.light-mode .timeline-content {
@@ -855,11 +864,13 @@ body.light-mode .skill-tag {
 #services{
     padding: 30px 0;
 }
-.services-list{
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    grid-gap: 40px;
-    margin-top: 50px;
+.services-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+    max-width: 1200px;
+    margin: 50px auto 0;
 }
 
 .project-card {
