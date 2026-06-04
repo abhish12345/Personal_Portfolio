@@ -14,18 +14,18 @@ html{
 }
 
 :root {
-    --primary-color: #ff6b6b;
-    --secondary-color: #546de5;
-    --dark-bg: #1a1a1a;
-    --light-bg: #f5f5f5;
-    --dark-text: #333;
-    --light-text: #fff;
-    --card-bg-dark: #262626;
+    --primary-color: #0ea5e9; /* Vibrant Cyan/Teal */
+    --secondary-color: #8b5cf6; /* Modern Violet */
+    --dark-bg: #030712; /* Slate 955 */
+    --light-bg: #f3f4f6;
+    --dark-text: #111827;
+    --light-text: #f9fafb;
+    --card-bg-dark: #0f172a; /* Slate 900 */
     --card-bg-light: #ffffff;
-    --hover-color: #64ffda;
-    --gradient-primary: linear-gradient(135deg, #ff6b6b, #ff9d9d);
-    --shadow-primary: 0 10px 20px rgba(255, 107, 107, 0.3);
-    --transition-default: all 0.3s ease;
+    --hover-color: #38bdf8;
+    --gradient-primary: linear-gradient(135deg, #0ea5e9, #8b5cf6);
+    --shadow-primary: 0 10px 25px rgba(14, 165, 233, 0.2);
+    --transition-default: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 
@@ -70,8 +70,9 @@ nav{
     z-index: 100;
 }
 
-/* Hide hamburger menu icon by default (only show on mobile) */
-nav .fas.fa-bars {
+/* Hide hamburger and close menu icons by default (only show on mobile) */
+nav .fas.fa-bars,
+nav ul .fas.fa-xmark {
     display: none;
 }
 
@@ -331,7 +332,7 @@ nav ul li a{
 #about{
     padding: 80px 0;
     color: var(--light-text);
-    background: linear-gradient(to bottom, var(--dark-bg), #232323);
+    background: linear-gradient(to bottom, var(--dark-bg), #0f172a);
 }
 
 .about-header {
@@ -695,7 +696,7 @@ body.light-mode .timeline-description {
 
 #services{
     padding: 60px 0;
-    background: linear-gradient(to bottom, #232323, #1a1a1a);
+    background: linear-gradient(to bottom, #0f172a, var(--dark-bg));
 }
 
 .services-list{
@@ -870,7 +871,7 @@ body.light-mode .timeline-description {
 
 #contact {
     padding: 80px 0;
-    background: linear-gradient(to bottom, #1a1a1a, #121212);
+    background: linear-gradient(to bottom, var(--dark-bg), #090d16);
     position: relative;
     overflow: hidden;
 }
@@ -1165,7 +1166,7 @@ form .btn2 i {
     }
     
     nav ul {
-        background: linear-gradient(135deg, var(--primary-color), #ff9d9d);
+        background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
         position: fixed;
         top: 0;
         right: -200px;
