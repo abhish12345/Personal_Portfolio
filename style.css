@@ -528,6 +528,28 @@ nav {
   color: var(--accent-soft);
 }
 
+.btn-hacker {
+  border-color: rgba(0, 255, 156, 0.42);
+  background: rgba(0, 255, 156, 0.08);
+  color: #7dffc9;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  font-size: 0.82rem;
+  letter-spacing: 0.02em;
+}
+
+.btn-hacker .icon {
+  color: #00ff9c;
+}
+
+.btn-hacker:hover,
+.btn-hacker:focus-visible {
+  border-color: #00ff9c;
+  background: rgba(0, 255, 156, 0.14);
+  color: #d8fff0;
+  box-shadow: 0 12px 30px rgba(0, 255, 156, 0.14);
+  transform: translateY(-2px);
+}
+
 .btn:disabled {
   opacity: 0.65;
   cursor: wait;
@@ -661,6 +683,11 @@ nav {
 main > section {
   position: relative;
   padding: clamp(64px, 8vw, 104px) 0;
+}
+
+main > section:last-of-type,
+#contact {
+  padding-bottom: 0;
 }
 
 #about {
@@ -1432,6 +1459,29 @@ a.contact-item:hover {
   line-height: 1.6;
 }
 
+.copyright .footer-mode {
+  margin-top: 8px;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  font-size: 0.72rem;
+  letter-spacing: 0.02em;
+}
+
+.footer-mode a {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  border-bottom: 1px solid transparent;
+  color: var(--accent-soft);
+  text-decoration: none;
+  transition: color var(--transition), border-color var(--transition);
+}
+
+.footer-mode a:hover,
+.footer-mode a:focus-visible {
+  border-color: currentColor;
+  color: #7dffc9;
+}
+
 /* ==========================================================================
    Scroll reveal (progressive enhancement)
    ========================================================================== */
@@ -1772,6 +1822,11 @@ a.contact-item:hover {
 @media (max-width: 640px) {
   main > section {
     padding: 60px 0;
+  }
+
+  main > section:last-of-type,
+  #contact {
+    padding-bottom: 0;
   }
 
   .header-btns {
