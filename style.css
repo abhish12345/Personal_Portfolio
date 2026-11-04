@@ -1556,6 +1556,7 @@ a.contact-item:hover {
   }
 
   #header {
+    min-height: auto;
     background-image:
       linear-gradient(
         180deg,
@@ -1583,7 +1584,7 @@ a.contact-item:hover {
 
   .header-content {
     align-items: flex-start;
-    padding: 30px 0 62px;
+    padding: 24px 0 32px;
   }
 
   .header-text {
@@ -1821,7 +1822,11 @@ a.contact-item:hover {
 
 @media (max-width: 640px) {
   main > section {
-    padding: 60px 0;
+    padding: 48px 0;
+  }
+
+  .header-content {
+    padding: 16px 0 20px;
   }
 
   main > section:last-of-type,
