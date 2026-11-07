@@ -1,10 +1,10 @@
-# Abhishek Kumar — Personal Portfolio
+# Abhishek Kumar â€” Personal Portfolio
 
 A fast, accessible portfolio for a Machine Learning & AI Engineer working across NLP, speech and audio, computer vision, and retrieval-augmented generation.
 
 The default page is a clean, recruiter-friendly single-page site. An optional **Hacker Mode** adds a fully interactive, terminal-inspired experience without replacing the default.
 
-**Live site:** [personal-portfolio-jet-nine.vercel.app](https://personal-portfolio-jet-nine.vercel.app)
+**Live site:** [abhi-portfolio-green.vercel.app](https://abhi-portfolio-green.vercel.app)
 
 ![Portfolio preview](images/og-cover.jpg)
 
@@ -13,7 +13,7 @@ The default page is a clean, recruiter-friendly single-page site. An optional **
 - Semantic, single-page layout with a clear heading hierarchy and section landmarks
 - Responsive from 320 px phones through wide desktop screens
 - Accessible tabs, mobile navigation, skip link, visible focus states, and reduced-motion support
-- Project details that work with a mouse, keyboard, and touch — no hover-only content
+- Project details that work with a mouse, keyboard, and touch â€” no hover-only content
 - Contact form with validation, sending state, success feedback, and an email fallback if delivery fails
 - Content remains readable when JavaScript is unavailable
 - Optional Hacker Mode with a canvas-rendered 3D neural hero, interactive CLI terminal (REPL), Web Audio synthesized sound effects, accessible case-file dialogs, a keyboard-driven command palette, and matrix/CRT toggles
@@ -28,7 +28,7 @@ The default page is a clean, recruiter-friendly single-page site. An optional **
 - HTML5
 - Modern CSS (custom properties, Grid, Flexbox, `clamp()`)
 - Vanilla JavaScript (IntersectionObserver, accessible tabs, mobile drawer, contact form)
-- Canvas 2D for the Hacker Mode neural hero and matrix rain — no 3D library or CDN dependency
+- Canvas 2D for the Hacker Mode neural hero and matrix rain â€” no 3D library or CDN dependency
 - Self-hosted Montserrat variable font (37 KB Latin subset) for the clean site
 - Self-hosted JetBrains Mono variable font (31 KB Latin subset) for Hacker Mode
 - Vercel for static hosting
@@ -68,27 +68,27 @@ Content is duplicated between `index.html` and `hacker.html`, so update both whe
 
 ```text
 .
-├── index.html          # clean, recruiter-friendly default
-├── style.css
-├── script.js
-├── hacker.html         # optional terminal-inspired experience
-├── hacker.css
-├── hacker.js
-├── images/
-│   ├── Abhishek_Kumar_CV.pdf
-│   ├── apple-touch-icon.png
-│   ├── background.webp
-│   ├── favicon.ico
-│   ├── logo.webp
-│   ├── mobile-bg.webp
-│   └── og-cover.jpg
-├── fonts/
-│   ├── jetbrains-mono-latin-variable.woff2
-│   └── montserrat-latin-variable.woff2
-├── robots.txt
-├── sitemap.xml
-├── vercel.json
-└── README.md
+â”œâ”€â”€ index.html          # clean, recruiter-friendly default
+â”œâ”€â”€ style.css
+â”œâ”€â”€ script.js
+â”œâ”€â”€ hacker.html         # optional terminal-inspired experience
+â”œâ”€â”€ hacker.css
+â”œâ”€â”€ hacker.js
+â”œâ”€â”€ images/
+â”‚   â”œâ”€â”€ Abhishek_Kumar_CV.pdf
+â”‚   â”œâ”€â”€ apple-touch-icon.png
+â”‚   â”œâ”€â”€ background.webp
+â”‚   â”œâ”€â”€ favicon.ico
+â”‚   â”œâ”€â”€ logo.webp
+â”‚   â”œâ”€â”€ mobile-bg.webp
+â”‚   â””â”€â”€ og-cover.jpg
+â”œâ”€â”€ fonts/
+â”‚   â”œâ”€â”€ jetbrains-mono-latin-variable.woff2
+â”‚   â””â”€â”€ montserrat-latin-variable.woff2
+â”œâ”€â”€ robots.txt
+â”œâ”€â”€ sitemap.xml
+â”œâ”€â”€ vercel.json
+â””â”€â”€ README.md
 ```
 
 The original `background.png`, `Mobile_bg.png`, and `Logo.jpg` source images are kept in the repository for future edits and excluded from the deployment with [`.vercelignore`](.vercelignore).
@@ -112,17 +112,17 @@ The site is designed for Vercel:
 3. Keep the framework preset as **Other** and leave the build command empty.
 4. Deploy; Vercel serves the static files from the repository root. Both `index.html` and `hacker.html` are deployed, and Hacker Mode stays `noindex` until its robots meta tag is removed.
 
-Any static host works as well — the site has no server-side dependencies.
+Any static host works as well â€” the site has no server-side dependencies.
 
 ## Asset notes
 
 - Hero images are WebP: about 26 KB desktop and 37 KB mobile.
 - Montserrat is self-hosted as a 37 KB variable font, so no request is made to Google Fonts.
 - JetBrains Mono is self-hosted as a 31 KB variable font for Hacker Mode.
-- Logo is a transparent WebP recolored to the site’s cyan/violet palette.
-- Social preview is a 1200 × 630 JPEG at about 60 KB.
-- Résumé is a compact two-page PDF at about 7 KB.
+- Logo is a transparent WebP recolored to the siteâ€™s cyan/violet palette.
+- Social preview is a 1200 Ã— 630 JPEG at about 60 KB.
+- RÃ©sumÃ© is a compact two-page PDF at about 7 KB.
 
 ## License and content
 
-The site content, résumé, and images belong to Abhishek Kumar. Please do not reuse the personal content without permission.
+The site content, rÃ©sumÃ©, and images belong to Abhishek Kumar. Please do not reuse the personal content without permission.
