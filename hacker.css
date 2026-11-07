@@ -2088,11 +2088,18 @@ body.nav-open .nav-backdrop {
 }
 
 .project__body h3 {
+  display: flex;
+  align-items: flex-start;
+  min-height: 2.6em;
   color: var(--ink);
   font-size: clamp(1.12rem, 1.6vw, 1.35rem);
   font-weight: 600;
   letter-spacing: -0.03em;
   line-height: 1.28;
+}
+
+.project--featured .project__body h3 {
+  min-height: auto;
 }
 
 .project--featured .project__body h3 {
@@ -2102,9 +2109,14 @@ body.nav-open .nav-backdrop {
 }
 
 .project__summary {
+  min-height: 56px;
   color: var(--muted);
   font-size: 10.5px;
   line-height: 1.78;
+}
+
+.project--featured .project__summary {
+  min-height: auto;
 }
 
 .project--featured .project__summary {

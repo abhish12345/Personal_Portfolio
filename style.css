@@ -1166,6 +1166,9 @@ html:not(.js) #education {
 }
 
 .project-card h3 {
+  display: flex;
+  align-items: flex-start;
+  min-height: 2.7em;
   margin-bottom: 12px;
   color: var(--light-text);
   font-size: 1.16rem;
@@ -1175,6 +1178,7 @@ html:not(.js) #education {
 }
 
 .project-card > p {
+  min-height: 96px;
   margin-bottom: 18px;
   color: var(--muted-text);
   font-size: 0.9rem;
