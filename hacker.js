@@ -643,6 +643,7 @@
 
   projectButtons.forEach(function (button) {
     button.addEventListener("click", function () {
+      SoundFX.playKeyClick();
       applyProjectFilter(button.getAttribute("data-project-filter"));
     });
   });

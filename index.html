@@ -355,8 +355,16 @@
       <section id="projects" aria-labelledby="projects-title">
         <div class="container">
           <h2 class="sub-title" id="projects-title" data-aos="fade-up">My <span>Projects</span></h2>
+                    <div class="projects-filter-bar" data-aos="fade-up">
+            <div class="filter-pills" role="tablist" aria-label="Filter projects by technology">
+              <button class="filter-pill is-active" type="button" data-filter="all" aria-selected="true">All <span>6</span></button>
+              <button class="filter-pill" type="button" data-filter="genai" aria-selected="false">Generative AI &amp; Agents <span>3</span></button>
+              <button class="filter-pill" type="button" data-filter="vision" aria-selected="false">Computer Vision <span>2</span></button>
+              <button class="filter-pill" type="button" data-filter="speech" aria-selected="false">Audio &amp; Speech <span>1</span></button>
+            </div>
+          </div>
           <div class="services-list">
-            <article class="project-card" data-aos="fade-up" data-aos-delay="50" tabindex="0" aria-labelledby="project-graphrag-title">
+            <article class="project-card" data-cat="genai" data-aos="fade-up" data-aos-delay="50" tabindex="0" aria-labelledby="project-graphrag-title">
               <div class="project-icon"><svg class="icon" aria-hidden="true"><use href="#i-network"></use></svg></div>
               <h3 id="project-graphrag-title">Enterprise Hybrid RAG &amp; GraphRAG Platform</h3>
               <p>
@@ -381,7 +389,7 @@
             </article>
 
 
-            <article class="project-card" data-aos="fade-up" data-aos-delay="50" tabindex="0" aria-labelledby="project-roadvision-title">
+            <article class="project-card" data-cat="vision" data-aos="fade-up" data-aos-delay="50" tabindex="0" aria-labelledby="project-roadvision-title">
               <div class="project-icon"><svg class="icon" aria-hidden="true"><use href="#i-cpu"></use></svg></div>
               <h3 id="project-roadvision-title">RoadVision-AI</h3>
               <p>
@@ -406,7 +414,7 @@
             </article>
 
 
-            <article class="project-card" data-aos="fade-up" data-aos-delay="50" tabindex="0" aria-labelledby="project-aml-title">
+            <article class="project-card" data-cat="genai" data-aos="fade-up" data-aos-delay="50" tabindex="0" aria-labelledby="project-aml-title">
               <div class="project-icon"><svg class="icon" aria-hidden="true"><use href="#i-shield"></use></svg></div>
               <h3 id="project-aml-title">Anti Money Laundering (AML) System</h3>
               <p>
@@ -430,7 +438,7 @@
               </div>
             </article>
 
-            <article class="project-card" data-aos="fade-up" data-aos-delay="200" tabindex="0" aria-labelledby="project-talk2db-title">
+            <article class="project-card" data-cat="genai" data-aos="fade-up" data-aos-delay="100" tabindex="0" aria-labelledby="project-talk2db-title">
               <div class="project-icon"><svg class="icon" aria-hidden="true"><use href="#i-database"></use></svg></div>
               <h3 id="project-talk2db-title">Talk2DB: Autonomous NL-to-Query Agent</h3>
               <p>
@@ -454,7 +462,7 @@
               </div>
             </article>
 
-            <article class="project-card" data-aos="fade-up" data-aos-delay="150" tabindex="0" aria-labelledby="project-speaker-title">
+            <article class="project-card" data-cat="speech" data-aos="fade-up" data-aos-delay="150" tabindex="0" aria-labelledby="project-speaker-title">
               <div class="project-icon"><svg class="icon" aria-hidden="true"><use href="#i-mic"></use></svg></div>
               <h3 id="project-speaker-title">Real-Time Speaker Identification</h3>
               <p>
@@ -478,7 +486,7 @@
               </div>
             </article>
 
-            <article class="project-card" data-aos="fade-up" data-aos-delay="250" tabindex="0" aria-labelledby="project-document-title">
+            <article class="project-card" data-cat="vision" data-aos="fade-up" data-aos-delay="200" tabindex="0" aria-labelledby="project-document-title">
               <div class="project-icon"><svg class="icon" aria-hidden="true"><use href="#i-id"></use></svg></div>
               <h3 id="project-document-title">ID Barcode &amp; Document Intelligence</h3>
               <p>
