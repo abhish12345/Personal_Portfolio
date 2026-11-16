@@ -1894,7 +1894,7 @@ a.contact-item:hover {
   }
 
   /* The card heading is already visible above the static overlay. */
-  .project-overlay-title {
+  .project-card .project-overlay-title {
     display: none;
   }
 
