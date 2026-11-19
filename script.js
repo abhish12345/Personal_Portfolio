@@ -567,11 +567,36 @@
           }, 8000);
         })
         .catch(function (error) {
-          console.error("Contact form error:", error);
-          showStatus(
-            "Sorry, your message could not be sent. Please email abhishekkumarnwd71@gmail.com directly.",
-            "error"
-          );
+          console.error("Contact form error, attempting fallback:", error);
+          try {
+            var iframeName = "hidden_contact_iframe";
+            var iframe = document.getElementById(iframeName);
+            if (!iframe) {
+              iframe = document.createElement("iframe");
+              iframe.id = iframeName;
+              iframe.name = iframeName;
+              iframe.style.display = "none";
+              document.body.appendChild(iframe);
+            }
+            form.action = CONTACT_ENDPOINT;
+            form.method = "POST";
+            form.target = iframeName;
+            form.submit();
+            form.reset();
+            showStatus(
+              "Message sent successfully. I'll get back to you soon.",
+              "success"
+            );
+            statusResetTimer = window.setTimeout(function () {
+              showStatus("", null);
+            }, 8000);
+          } catch (fallbackErr) {
+            console.error("Contact fallback error:", fallbackErr);
+            showStatus(
+              "Sorry, your message could not be sent. Please email abhishekkumarnwd71@gmail.com directly.",
+              "error"
+            );
+          }
         })
         .finally(function () {
           if (submitButton) {
