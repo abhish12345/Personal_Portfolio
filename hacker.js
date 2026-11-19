@@ -109,7 +109,7 @@
   SoundFX.init();
 
   var CONTACT_ENDPOINT =
-    "https://script.google.com/macros/s/AKfycbxvCbgXXcqHK3uO3N5jz9Kiduo0SxIS5lyHnObDY-6zBNUYfPWY2zE9nd4Z1APaN4NUjA/exec";
+    "https://script.google.com/macros/s/AKfycbwFW7P2FEHgIbzFCveV87XkPJk75qKnA51Dvpd3Ehy7NPnHPzypKFHRxWFRBmA0xRXj_g/exec";
 
   var motionQuery = window.matchMedia
     ? window.matchMedia("(prefers-reduced-motion: reduce)")
