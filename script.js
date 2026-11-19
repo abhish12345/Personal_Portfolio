@@ -7,7 +7,7 @@
   "use strict";
 
   var CONTACT_ENDPOINT =
-    "https://script.google.com/macros/s/AKfycbxemCV2xYrBEPRo8WWQym7PHUsKiBPFtcHsrq0GJukbaA2hJ2_7m1x1oWitPtVlEJtL/exec";
+    "https://script.google.com/macros/s/AKfycbxvCbgXXcqHK3uO3N5jz9Kiduo0SxIS5lyHnObDY-6zBNUYfPWY2zE9nd4Z1APaN4NUjA/exec";
 
   var prefersReducedMotion =
     window.matchMedia &&
@@ -552,13 +552,10 @@
       window
         .fetch(CONTACT_ENDPOINT, {
           method: "POST",
-          body: new FormData(form)
+          body: new FormData(form),
+          mode: "no-cors"
         })
-        .then(function (response) {
-          if (!response.ok) {
-            throw new Error("Request failed with status " + response.status);
-          }
-
+        .then(function () {
           form.reset();
           showStatus(
             "Message sent successfully. I'll get back to you soon.",
