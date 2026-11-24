@@ -202,7 +202,7 @@ main:focus-visible {
       rgba(3, 7, 18, 0.14) 76%,
       rgba(3, 7, 18, 0.18) 100%
     ),
-    url("images/background.webp?v=4");
+    url("images/background.webp?v=5");
   background-position: center, right center;
   background-repeat: no-repeat, no-repeat;
   background-size: cover, cover;
@@ -1674,7 +1674,7 @@ a.contact-item:hover {
         #030712 54%,
         #030712 100%
       ),
-      url("images/mobile-bg.webp?v=4");
+      url("images/mobile-bg.webp?v=5");
     background-position: center, center 62px;
     background-size: cover, min(100%, 440px) auto;
     background-repeat: no-repeat, no-repeat;
