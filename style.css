@@ -198,11 +198,11 @@ main:focus-visible {
       90deg,
       #030712 0%,
       rgba(3, 7, 18, 0.97) 34%,
-      rgba(3, 7, 18, 0.82) 54%,
-      rgba(3, 7, 18, 0.45) 78%,
-      rgba(3, 7, 18, 0.62) 100%
+      rgba(3, 7, 18, 0.72) 52%,
+      rgba(3, 7, 18, 0.14) 76%,
+      rgba(3, 7, 18, 0.18) 100%
     ),
-    url("images/background.webp");
+    url("images/background.webp?v=3");
   background-position: center, right center;
   background-repeat: no-repeat, no-repeat;
   background-size: cover, cover;
@@ -1667,14 +1667,17 @@ a.contact-item:hover {
     background-image:
       linear-gradient(
         180deg,
-        rgba(3, 7, 18, 0.8) 0%,
-        rgba(3, 7, 18, 0.86) 42%,
-        rgba(3, 7, 18, 0.97) 78%,
+        rgba(3, 7, 18, 0.68) 0%,
+        rgba(3, 7, 18, 0.08) 12%,
+        rgba(3, 7, 18, 0.16) 32%,
+        rgba(3, 7, 18, 0.82) 43%,
+        #030712 54%,
         #030712 100%
       ),
-      url("images/mobile-bg.webp");
-    background-position: center, center top;
-    background-size: cover, cover;
+      url("images/mobile-bg.webp?v=3");
+    background-position: center, center 62px;
+    background-size: cover, min(100%, 440px) auto;
+    background-repeat: no-repeat, no-repeat;
   }
 
   #header::before {
@@ -1691,7 +1694,7 @@ a.contact-item:hover {
 
   .header-content {
     align-items: flex-start;
-    padding: 24px 0 32px;
+    padding: clamp(245px, 68vw, 320px) 0 32px;
   }
 
   .header-text {
@@ -1951,7 +1954,7 @@ a.contact-item:hover {
   }
 
   .header-content {
-    padding: 16px 0 20px;
+    padding: clamp(235px, 66vw, 300px) 0 24px;
   }
 
   main > section:last-of-type,
