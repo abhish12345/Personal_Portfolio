@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 60" width="240" height="60" fill="none">
+  <defs>
+    <linearGradient id="cyber-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#38bdf8" />
+      <stop offset="100%" stop-color="#a855f7" />
+    </linearGradient>
+    <filter id="subtle-glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="3" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+  </defs>
+
+  <!-- Hexagonal Tech Icon -->
+  <g transform="translate(6, 6)">
+    <!-- Outer hexagon -->
+    <polygon points="24,3 43,14 43,34 24,45 5,34 5,14" 
+             stroke="url(#cyber-grad)" 
+             stroke-width="2.5" 
+             fill="rgba(15, 23, 42, 0.7)" 
+             filter="url(#subtle-glow)"/>
+    <!-- Monogram <AK/> inside -->
+    <text x="24" y="28" 
+          font-family="'Montserrat', system-ui, -apple-system, sans-serif" 
+          font-size="14" 
+          font-weight="800" 
+          fill="#f8fafc" 
+          text-anchor="middle" 
+          letter-spacing="0.5">AK</text>
+    <circle cx="36" cy="12" r="2.5" fill="#38bdf8" />
+  </g>
+
+  <!-- Brand Typography -->
+  <text x="64" y="32" 
+        font-family="'Montserrat', system-ui, -apple-system, sans-serif" 
+        font-size="19" 
+        font-weight="700" 
+        fill="#f8fafc" 
+        letter-spacing="-0.3">Abhishek</text>
+  
+  <text x="153" y="32" 
+        font-family="'Montserrat', system-ui, -apple-system, sans-serif" 
+        font-size="19" 
+        font-weight="800" 
+        fill="url(#cyber-grad)">.ai</text>
+
+  <!-- Subtitle Tagline -->
+  <text x="65" y="47" 
+        font-family="'JetBrains Mono', 'Fira Code', monospace" 
+        font-size="8.5" 
+        font-weight="600" 
+        fill="#94a3b8" 
+        letter-spacing="1.8">AI &amp; ML ENGINEER</text>
+</svg>

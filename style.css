@@ -246,7 +246,7 @@ nav {
 }
 
 .logo {
-  width: 140px;
+  width: 170px;
   height: auto;
   border-radius: 8px;
   transition: transform var(--transition);
@@ -2010,7 +2010,7 @@ a.contact-item:hover {
 
 @media (max-width: 380px) {
   .logo {
-    width: 122px;
+    width: 140px;
   }
 
   .header-text h1 {
